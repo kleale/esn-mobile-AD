@@ -1,0 +1,24 @@
+.json_output li {
+    list-style-type: none;
+}
+.json_output .toggle::before {
+    content: "-";
+    border-radius: 2px;
+    border-color: #21bc0d;
+    border-style: solid;
+    border-width: .1em;
+    display: inline-block;
+    line-height: 7px;
+    margin: 0 3px;
+    padding: 1px;
+    cursor: pointer;
+}
+.json_output .object.collapsed ul{
+    display: none;
+}
+.json_output .object.collapsed .toggle::before{
+    content: '+';
+}
+.json_output .object.collapsed .toggle-end::before{
+    content: '...';
+}

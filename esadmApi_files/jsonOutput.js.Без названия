@@ -1,0 +1,158 @@
+class jsonOutput{
+
+    /**
+     * @typedef {Array} init
+     * @property {string} input - input с которого берется json строка
+     * @property {string|null} outputСontainer - контейнер для вывода (не обязательно)
+     */
+    constructor(init) {
+        // получаем значение из указанного input
+        let json = this.checkArray(init.input);
+        // определяем контейнер: если outputСontainer указан, используем его, иначе создаем новый div с классом 'json_output'
+        this.сontainer = init.outputСontainer ? $(init.outputСontainer) : $('<div>').addClass('json_output');
+        // обрабатываем JSON и привязываем события
+        this.processJson(json);
+        this.bindToggleEvent();
+        // возвращаем новый div, содержащий наш контейнер, только если outputСontainer не был предоставлен
+        if (!init.outputСontainer) {
+            return $('<div>').append(this.сontainer);
+        }
+    }
+
+    /**
+     * парсит входное значение как JSON строку, используя jQuery метод $.parseJSON.
+     * если входное значение не является строкой JSON, выводит сообщение об ошибке в консоль.
+     *
+     * @param {string} value - строка, предположительно содержащая JSON данные.
+     * @returns {Object|null} - распарсенный объект JSON, или null в случае ошибки парсинга.
+     */
+    checkArray(value){
+        try {
+            var parsedJson = $.parseJSON(value);
+        } catch (e) {
+            console.log('не является строкой JSON');
+        }
+        return parsedJson
+    }
+
+    /**
+     * рекурсивно обрабатывает объект JSON и строит интерфейс в виде списка,
+     * где каждый элемент списка является либо раскрываемым массивом (если объект - массив),
+     * либо отображает ключ-значение (если объект - не массив).
+     *
+     * @param {Object} obj - объект JSON для обработки.
+     * @param {HTMLElement} parentList - родительский элемент списка, в который добавляются элементы.
+     * @param {string|null} parentKey - ключ родительского элемента
+     */
+    processJson(obj, parentList = null, parentKey = null) {
+        if (($.type(obj) === 'object' || $.type(obj) === 'array') && obj !== null) {
+            if ($.isArray(obj)) {
+                // преобразовать массив в объект
+                obj = Object.assign({}, obj);
+            }
+            let listItem = this.createCollapsibleLi(parentList, parentKey);
+            for (const key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    this.processJson(obj[key], listItem, key);
+                }
+            }
+        } else {
+            // обрабатываем примитивное значение (не объект)
+            this.createLi(obj, parentList, parentKey);
+        }
+    }
+
+    /**
+     * создает раскрываемый элемент списка (li) для объекта JSON.
+     * включает в себя ключ (если передан) и кнопку для сворачивания/разворачивания.
+     *
+     * @param {HTMLElement} parentList - родительский элемент списка, в который добавляется новый элемент.
+     * @param {string|null} key - ключ для отображения (если есть) внутри элемента списка.
+     * @returns {HTMLElement} - внутренний список (ul) элемента, в который добавляются дочерние элементы.
+     */
+    createCollapsibleLi(parentList, key) {
+        // создаем элемент списка, используя переданный родительский список или основной контейнер, если родительский не указан.
+        parentList = parentList || this.сontainer;
+        let listItem;
+        // инициализируем переменные для текстового узла между ключом и значением
+        let colonTextNode;
+        // создаем элемент span для ключа с классом 'property'
+        let spanKey = $('<span>').addClass('property g');
+        // создаем элемент span для значения объекта с классом 'object'
+        let objectSpan = $('<span>').addClass('object');
+        // если есть ключ, добавляем его к элементу списка
+        if (key) {
+            // создаем элемент списка (li)
+            listItem = $('<li>');
+            // устанавливаем текст ключа в span с классом 'property'
+            spanKey.text('"' + key + '"');
+            // создаем текстовый узел между ключом и значением
+            colonTextNode = document.createTextNode(':');
+            // добавляем элемент span с классом 'property' (не уверен, что это нужно)
+            $('<span>').addClass('property');
+        } else {
+            // если ключа нет - перебераемый массив, используем основной контейнер как элемент списка
+            listItem = this.сontainer;
+        }
+        // создаем элемент span для кнопки сворачивания/разворачивания с классом 'toggle'
+        let spanToggle = $('<span>').addClass('toggle').text("{");
+        // собираем структуру элемента списка
+        objectSpan.append(spanToggle);
+        listItem.append(spanKey, colonTextNode, objectSpan);
+        // создаем внутренний список (ul) для добавления дочерних элементов
+        let ul = $('<ul>');
+        objectSpan.append(ul);
+        // добавляем элемент списка в родительский список
+        $(parentList).append(listItem);
+        // закрываем элемент по умолчанию и возвращаем внутренний список для добавления дочерних элементов
+        this.closeCollapsibleLi(objectSpan);
+        return ul;
+    }
+
+    /**
+     * привязывает обработчик события click к элементам с классом '.json_output .toggle'.
+     * при клике на элементе кнопки, изменяет класс родительского элемента с классом 'object',
+     * добавляя или удаляя класс 'collapsed', что позволяет сворачивать или разворачивать содержимое.
+     */
+    bindToggleEvent() {
+        // Используем делегирование событий для обработки кликов на будущих элементах с классом '.json_output .toggle'
+        $(document).off('click', '.json_output .toggle').on('click', '.json_output .toggle', function () {
+            // Изменяем класс родительского элемента с классом 'object' при клике на кнопку
+            $(this).parent('.object').toggleClass('collapsed');
+        });
+    }
+
+    /**
+     * добавляет закрывающий тег '}' к раскрываемому элементу списка.
+     *
+     * @param {HTMLElement} listItem - элемент списка, для которого добавляется закрывающий тег.
+     */
+    closeCollapsibleLi(listItem) {
+        // Создаем элемент с закрывающим тегом '}'
+        let spanToggleEnd = $('<span>').addClass('toggle-end').text("}");
+        // Добавляем его к раскрываемому элементу списка
+        listItem.append(spanToggleEnd);
+    }
+
+    /**
+     * создает элемент списка (li) для примитивного значения (не объекта) JSON.
+     * включает в себя ключ (если передан) и отображаемый текстовый узел.
+     *
+     * @param {string} text - текст для отображения в элементе списка.
+     * @param {HTMLElement} parentList - родительский элемент списка, в который добавляется новый элемент.
+     * @param {string|null} key - ключ для отображения (если есть) внутри элемента списка.
+     */
+    createLi(text, parentList, key) {
+        // если не передан родительский элемент списка, используем основной контейнер
+        parentList = parentList || this.сontainer;
+        // создаем элемент списка
+        let listItem = $('<li>');
+        let spanKey = $('<span>').text('"' + key + '"').addClass('property g');
+        let colonTextNode = document.createTextNode(' : ');
+        let textSpan = $('<span>').text('"' + text + '"').addClass('string');
+        // собираем структуру элемента списка
+        listItem.append(spanKey, colonTextNode, textSpan);
+        // добавляем элемент в родительский список
+        $(parentList).append(listItem);
+    }
+}

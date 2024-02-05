@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://dev.esnadm.com/matches?game_id=582&tournament_id=8286# -->
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, shrink-to-fit=no" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <title>[A] M[] T[epl world am s8]</title>
+    <link rel="icon" href="https://dev.esnadm.com/assets/img/favicon.ico" type="image/png" />
+    <link rel="stylesheet" href="./esadmApi_files/bootstrap.min.css" />
+    <link rel="stylesheet" href="./esadmApi_files/font-awesome.min.css" />
+    <link rel="stylesheet" href="./esadmApi_files/style.css" />
+    <link rel="stylesheet" href="./esadmApi_files/main.css" />
+    <link rel="stylesheet" href="./esadmApi_files/jsonOutput.css" />
+    <link rel="stylesheet" href="./esadmApi_files/css" />
+    <script type="text/javascript" src="./esadmApi_files/jquery.v2.0.3.js.Без названия"></script>
+    <script type="text/javascript" src="./esadmApi_files/jquery-ui.v1.13.2.min.js.Без названия"></script>
+    <style>
+      .iblock {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        padding: 10px;
+      }
+      .iblock_act .iblock {
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body class="admin sidebar-mini layout-fixed layout-navbar-fixed modal-open" style="">
+    <div id="wrapper">
+      <aside class="main-sidebar sidebar-dark-primary elevation-4 os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition">
+        <div class="brand-link">
+          <a href="https://dev.esnadm.com/"><img src="./esadmApi_files/logo_gt_footer.png" class="png" /></a>
+          <a href="javascript:;" class="gttime" onclick="get_time()"><i class="fa fa-fw fa-clock-o"></i><span id="utime" class="utime">22:08 MSK</span> <span class="caret"></span></a>
+        </div>
+        <div class="sidebar">
+          <div class="user-panel">
+            <div class="info">
+              <span><a class="d-block" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286#">kleale</a></span>
+              <span>
+                <a class="btn btn-primary btn-xs" href="https://dev.esnadm.com/logout"><i class="fa fa-sign-out"></i></a>
+              </span>
+            </div>
+          </div>
+          <nav class="mt-2">
+            <ul class="nav nav-pills flex-column" data-accordion="false" data-widget="treeview" id="main-nav" role="menu">
+              <li class="nav-item">
+                <a href="https://dev.esnadm.com/tournaments?game_id=582" class="nav-link">Турниры</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://dev.esnadm.com/stages?game_id=582" class="nav-link">Стадии</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://dev.esnadm.com/rounds?game_id=582" class="nav-link">Раунды</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://dev.esnadm.com/tabs?game_id=582" class="nav-link">Субраунды</a>
+              </li>
+              <li class="nav-item active">
+                <a href="https://dev.esnadm.com/matches?game_id=582" class="nav-link">Матчи</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://dev.esnadm.com/teams?game_id=582" class="nav-link">Команды</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://dev.esnadm.com/players?game_id=582" class="nav-link">Игроки</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://dev.esnadm.com/streams?game_id=582" class="nav-link">Стримы</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://dev.esnadm.com/videos?game_id=582" class="nav-link">Видео</a>
+              </li>
+              <li class="nav-item withLine">
+                <div class="nav-link"><span>Админы</span></div>
+                <ul class="nav nav-pills flex-column">
+                  <li class="nav-item">
+                    <a href="https://dev.esnadm.com/admins_roles" class="nav-link">Роли</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://dev.esnadm.com/admins" class="nav-link">Админы</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <div class="content-wrapper">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="https://dev.esnadm.com/">Главная</a></li>
+            <li class="breadcrumb-item"><a href="https://dev.esnadm.com/tournaments?game_id=582&amp;tournament_id=8286">EPL World AM S8</a></li>
+            <li class="breadcrumb-item"><a href="https://dev.esnadm.com/stages?game_id=582&amp;tournament_id=8286">Стадии</a></li>
+            <li class="breadcrumb-item"><a href="https://dev.esnadm.com/rounds?game_id=582&amp;tournament_id=8286">Раунды</a></li>
+            <li class="breadcrumb-item"><a href="https://dev.esnadm.com/tabs?game_id=582&amp;tournament_id=8286">Субраунды</a></li>
+            <li class="breadcrumb-item active">Матчи</li>
+          </ol>
+        </nav>
+        <section class="page">
+          <div class="container">
+            <div class="pagebg">
+              <div class="flex">
+                <div class="col grow">
+                  <div id="matches_list">
+                    <table class="matches table table-striped table-hover">
+                      <colgroup>
+                        <col style="width: 65px" />
+                        <col style="width: 120px" />
+                        <col style="" />
+                        <col style="width: 30px" />
+                        <col style="width: 60px" />
+                        <col style="width: 200px" />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th class="text-center">#</th>
+                          <th>Дата</th>
+                          <th>Матч</th>
+                          <th class="text-center">BO</th>
+                          <th class="text-center">Очки</th>
+                          <th></th>
+                        </tr>
+                        <tr id="tr-522598">
+                          <td class="text-center">522598</td>
+                          <td>
+                            <span class="sct" data-opt="" data-format="%j% %ms% %y%, %h%:%i%" datetime="1699552800" oncopy="get_unix_time(this)">9 ноя 2023, 21:00</span>
+                          </td>
+                          <td>
+                            <a target="_blank" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286#">EPL World AM S8</a> → <a target="_blank" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286#">Group Stage</a> → Table →
+                            <a target="_blank" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286#">Univers [0:0] x5</a>
+                          </td>
+                          <td class="text-center">3</td>
+                          <td class="text-center">0 - 0</td>
+                          <td class="text-right">
+                            <a id="btn_api_522598" data-vc="0" data-defwin="0" class="btn btn-danger btn-xs" href="javascript:;" onclick="window_match_api(522598)">API</a> <a id="btn_video_522598" data-vc="0" class="btn btn-danger btn-xs" href="javascript:;" onclick="window_match_video(522598)">Video</a>
+                            <a id="btn_stream_522598" class="btn btn-danger btn-xs" href="javascript:;" onclick="window_match_stream(522598)">Stream</a>
+                            <a class="btn btn-default btn-xs" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286&amp;match_id=522598"><i class="fa fa-pencil"></i></a>
+                            <a class="btn btn-danger btn-xs" href="javascript:;" onclick="if(confirm(&#39;удалить?&#39;)) delete_row(522598);"><i class="fa fa-times"></i></a>
+                          </td>
+                        </tr>
+                        <tr id="tr-522594">
+                          <td class="text-center">522594</td>
+                          <td>
+                            <span class="sct" data-opt="" data-format="%j% %ms% %y%, %h%:%i%" datetime="1698771600" oncopy="get_unix_time(this)">31 окт 2023, 20:00</span>
+                          </td>
+                          <td>
+                            <a target="_blank" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286#">EPL World AM S8</a> → <a target="_blank" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286#">Group Stage</a> → Table →
+                            <a target="_blank" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286#">IW [0:0] mk</a>
+                          </td>
+                          <td class="text-center">3</td>
+                          <td class="text-center">0 - 0</td>
+                          <td class="text-right">
+                            <a id="btn_api_522594" data-vc="0" data-defwin="0" class="btn btn-danger btn-xs" href="javascript:;" onclick="window_match_api(522594)">API</a> <a id="btn_video_522594" data-vc="0" class="btn btn-danger btn-xs" href="javascript:;" onclick="window_match_video(522594)">Video</a>
+                            <a id="btn_stream_522594" class="btn btn-danger btn-xs" href="javascript:;" onclick="window_match_stream(522594)">Stream</a>
+                            <a class="btn btn-default btn-xs" href="https://dev.esnadm.com/matches?game_id=582&amp;tournament_id=8286&amp;match_id=522594"><i class="fa fa-pencil"></i></a>
+                            <a class="btn btn-danger btn-xs" href="javascript:;" onclick="if(confirm(&#39;удалить?&#39;)) delete_row(522594);"><i class="fa fa-times"></i></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <br />
+                  <form action="https://dev.esnadm.com/matches" method="POST" name="update" class="form-horizontal">
+                    <input rel="1" name="game_id" value="582" type="hidden" class="input" />
+                    <input rel="1" name="tid" value="8286" type="hidden" class="input" />
+                    <input rel="8" name="fast" id="update_8_fast" value="0" type="hidden" class="input" />
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label">Дата</label>
+                          <div class="col-sm-9">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <input rel="1" name="date" id="update_1_date" value="" placeholder="ГГГГ-ММ-ДД" type="text" class="form-control input" />
+                              </div>
+                              <div class="col-sm-6">
+                                <input rel="1" name="time" id="update_1_time" value="" placeholder="ЧЧ:ММ" type="text" class="form-control input" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label">Стадия</label>
+                          <div class="col-sm-9">
+                            <select rel="1" name="stage" id="update_1_stage" class="form-control input" onchange="get_rounds(this.value)">
+                              <option value="0">Выбрать</option>
+                              <optgroup label="Стадии">
+                                <option value="32802">Group Stage</option>
+                                <option value="32803">Playoff</option>
+                              </optgroup>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label">Раунд</label>
+                          <div class="col-sm-5">
+                            <select rel="1" name="round" id="update_1_round" class="form-control input" onchange="get_tabs(this.value)">
+                              <option value="0">Выбрать</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-4">
+                            <select rel="1" name="rtab" id="update_1_rtab" class="form-control input">
+                              <option value="0">Субраунд</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label">Команда 1</label>
+                          <div class="col-sm-8">
+                            <select rel="1" name="t1" id="update_1_t1" class="form-control input">
+                              <option value="0">Выбрать</option>
+                              <option value="89862">IW</option>
+                              <option value="13030">mk</option>
+                              <option value="96193">Univers</option>
+                              <option value="95169">x5</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-1">
+                            <input rel="1" name="t1s" id="update_1_t1s" value="" placeholder="счет" type="text" class="form-control input" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-3 control-label">Команда 2</label>
+                          <div class="col-sm-8">
+                            <select rel="1" name="t2" id="update_1_t2" class="form-control input">
+                              <option value="0">Выбрать</option>
+                              <option value="89862">IW</option>
+                              <option value="13030">mk</option>
+                              <option value="96193">Univers</option>
+                              <option value="95169">x5</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-1">
+                            <input rel="1" name="t2s" id="update_1_t2s" value="" placeholder="счет" type="text" class="form-control input" />
+                          </div>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn btn-sm btn-primary" onclick="sform(&#39;update&#39;)" type="button">Добавить</button>
+                          <button class="btn btn-sm btn-success" onclick="fast_add();" type="button"><i class="fa fa-bolt"></i> Добавить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <form action="https://dev.esnadm.com/matches" method="POST" name="addtime" class="form-horizontal">
+                    <input name="stage" value="0" type="hidden" class="input" />
+                    <input name="round" value="0" type="hidden" class="input" />
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Время</label>
+                          <div class="col-sm-8">
+                            <input name="time" id="addtime_time" value="" placeholder="минуты | минуты* | минуты** | ГГГГ-ММ-ДД ЧЧ:ММ | ГГГГ-ММ-ДД ЧЧ:ММ*" type="text" class="form-control input" />
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="btn btn-primary btn-sm" onclick="sform(&#39;addtime&#39;)" type="button">Перенести матчи</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col" style="flex-basis: 400px; max-width: 400px; min-width: 400px">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <form action="https://dev.esnadm.com/matches" method="GET" name="filter" id="filter">
+                        <div class="form-group">
+                          <label>Дисциплина</label>
+                          <select name="game_id" id="filter_game_id" class="form-control" onchange="filter_clear_game(); $(&#39;#filter&#39;).submit()">
+                            <option value="0">Выбрать</option>
+                            <option value="704">CS:GO</option>
+                            <option value="582" selected="">Dota 2</option>
+                            <option value="300">Fortnite</option>
+                            <option value="755">Hearthstone</option>
+                            <option value="313">LoL</option>
+                            <option value="800">Overwatch</option>
+                            <option value="100">PUBG</option>
+                            <option value="600">Rainbow Six</option>
+                            <option value="200">Valorant</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Турнир</label>
+                          <input name="tournament_id" id="filter_tournament_id" value="8286" type="hidden" />
+                          <input id="filter_tournament_title" value="EPL World AM S8" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="tournaments" search-callback="search_callback_tournaments" autocomplete="off" />
+                        </div>
+                        <div class="form-group">
+                          <label>Стадия</label>
+                          <select name="stage_id" id="filter_stage_id" class="form-control" onchange="filter_clear_stage(); $(&#39;#filter&#39;).submit()">
+                            <option value="0">Выбрать</option>
+                            <optgroup label="Стадии">
+                              <option value="32802">Group Stage</option>
+                              <option value="32803">Playoff</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Раунд</label>
+                          <select name="round_id" id="filter_round_id" class="form-control" onchange="$(&#39;#filter&#39;).submit()">
+                            <option value="0">Выбрать</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Команда 1</label>
+                          <input name="team_1" id="filter_team_1" value="" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="teams" search-callback="search_callback_teams" autocomplete="off" />
+                        </div>
+                        <div class="form-group">
+                          <label>Команда 2</label>
+                          <input name="team_2" id="filter_team_2" value="" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="teams" search-callback="search_callback_teams" autocomplete="off" />
+                        </div>
+                        <button type="submit" class="btn btn-block btn-default">Найти</button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="panel panel-default panel-login">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Логи</h3>
+                    </div>
+                    <form action="https://dev.esnadm.com/logs" method="POST" name="actions" id="form_actions" class="form-horizontal" style="opacity: 1; pointer-events: auto">
+                      <input name="page" value="" type="hidden" class="input" />
+                      <input name="last_action_id" value="0" type="hidden" class="input" />
+                      <div id="pages_actions"><div class="panel-body">–</div></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block">
+      <div class="modal-dialog" style="width: 1000px">
+        <div class="modal-content">
+     
+            <h3 class="text-center">Матч <mark>Univers</mark> [Bo3] <mark>x5</mark></h3>
+            <form action="https://dev.esnadm.com/api" method="POST" name="window_match_upd">
+              <input rel="1" name="match_id" value="522598" type="hidden" class="input" />
+              <input rel="1" name="confirm" id="pconfirm" value="0" type="hidden" class="input" />
+              <table class="table-striped table table-condensed" id="match_window_games">
+                <tbody>
+                  <tr>
+                    <td style="padding: 12px 5px; text-align: center;">
+                        1
+                      <input rel="2" name="game_id" value="1052378" type="hidden" class="input" />
+                    </td>
+                    <td>
+                      <select rel="2" name="api_type" class="form-control input">
+                        <option value="">Тип</option>
+                        <option value="steam">Steam</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input rel="2" name="api_id" id="window_match_upd_1052378_db_id" value="" placeholder="api id" type="text" class="form-control input" />
+                    </td>
+                    <td width="150">
+                      <input rel="2" name="time" id="window_match_upd_1052378_db_id" value="" placeholder="time id" type="text" class="form-control input" />
+                    </td>
+                    <td width="150">
+                      <input rel="2" name="time" id="window_match_upd_1052378_db_id" value="" placeholder="time id" type="text" class="form-control input" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+            <center>
+              <a class="btn btn-success btn-small" href="javascript:;" onclick="sform(&#39;window_match_upd&#39;)"><i class="icon-ok"></i> Сохранить</a>
+            </center>
+       
+        </div>
+      </div>
+    </div>
+    <script>
+      var lang = "ru";
+      var tz = 180;
+      var utime = tz * 60;
+      var stime = 1707160084;
+      var game_id = 582;
+      var game_eng = "";
+      var mscores = {};
+      var globalTimeout = null;
+      var global_search_result = {};
+      var intIds = [];
+      var isCaptcha = false;
+      var additional_data = [];
+    </script>
+    <script src="./esadmApi_files/bootstrap.min.js.Без названия"></script>
+    <script src="./esadmApi_files/util.js.Без названия"></script>
+    <script src="./esadmApi_files/button.js.Без названия"></script>
+    <script src="./esadmApi_files/handler.base.js.Без названия"></script>
+    <script src="./esadmApi_files/handler.xhr.js.Без названия"></script>
+    <script src="./esadmApi_files/uploader.basic.js.Без названия"></script>
+    <script src="./esadmApi_files/uploader.js.Без названия"></script>
+    <script src="./esadmApi_files/jsonOutput.js.Без названия"></script>
+    <script>
+      function get_time() {
+        $.ajax({
+          dataType: "text",
+          data: {
+            rid: "admins",
+            ajax: "window_utime",
+            data: {},
+          },
+        }).done(function (txt) {
+          wms("Часовой пояс", txt);
+        });
+      }
+
+      function check_logs_actions() {
+        sform("actions");
+      }
+
+      function check_logs_tasks() {
+        sform("tasks");
+      }
+
+      function refresh() {
+        location.reload();
+      }
+
+      function check_task(task) {
+        $.ajax({
+          data: {
+            ajax: "check_task",
+            data: {
+              task_id: task.id,
+            },
+          },
+        }).done(function (data) {
+          if (task.block_id != undefined) {
+            var sec = $("#" + task.block_id).attr("rel") ? $("#" + task.block_id).attr("rel") - 0 : 0;
+            $("#" + task.block_id).attr("rel", sec + 1);
+            $("#" + task.block_id).addClass("iblock_act");
+          }
+          if (data.status == "0") {
+            if (task.block_id != undefined) {
+              $("#" + task.block_id + " .iblock").html("джоба в очереди на выполнение (" + sec + " сек.)");
+            }
+          } else if (data.status == "1") {
+            if (task.block_id != undefined) {
+              $("#" + task.block_id + " .iblock").html("джоба в процессе выполнения (" + sec + " сек.)");
+            }
+          } else {
+            if (task.block_id != undefined) {
+              $("#" + task.block_id + " .iblock").html("джоба выполнена (" + sec + " сек.), статус [" + data.status + "]");
+              $("#" + task.block_id).attr("rel", 0);
+            }
+            for (var i in intIds) {
+              if (intIds[i].task_id == task.id) {
+                clearInterval(intIds[i].id);
+                delete intIds[i];
+                break;
+              }
+            }
+            if (task.callback) {
+              return window[task.callback](data.status, task.data);
+            }
+          }
+        });
+      }
+
+      function logs_cant_update(data) {
+        if (data.status == 2) {
+          wms("", 'Идет изменение данных, подожди немного, а потом <a href="javascript:;" onclick="refresh()">обнови</a> страницу (твои изменения не будут сохранены)');
+        } else {
+          wms("", 'Данные на странице были изменены и чтобы не затереть изменения, <a href="javascript:;" onclick="refresh()">обнови</a> страницу (твои текущие изменения <span style="color:red">не будут</span> сохранены)');
+        }
+      }
+
+      function sform(name, captcha = null) {
+        if (isCaptcha && captcha && typeof $("#captcha > div").html() === "undefined") {
+          return sFormReCaptcha(name);
+        }
+        return sendForm(name);
+      }
+
+      function sFormReCaptcha(name) {
+        grecaptcha.ready(function () {
+          grecaptcha.execute(recaptcha_site_key, { action: name }).then(function (token) {
+            sendForm(name, token);
+          });
+        });
+      }
+
+      function sendForm(name, token = null) {
+        var rid = $("form[name=" + name + "]").attr("action");
+        block($("form[name=" + name + "]"), 0.4);
+        $.ajax({
+          data: {
+            rid: rid,
+            ajax: name,
+            data: form_data(name, token),
+          },
+        }).done(function (data) {
+          block($("form[name=" + name + "]"), 1.0);
+          if (data) {
+            if (isCaptcha && data.err && data.err.recaptcha === "v2" && form_error(name, data.err)) {
+              grecaptcha.ready(() => {
+                if (recaptchaV2 === undefined) {
+                  recaptchaV2 = grecaptcha.render("captcha", {
+                    sitekey: recaptcha_v2_site_key,
+                  });
+                }
+              });
+            }
+            if (form_error(name, data.err)) {
+              if (isCaptcha) {
+                grecaptcha.ready(() => {
+                  if (recaptchaV2 !== undefined) {
+                    grecaptcha.reset(recaptchaV2);
+                  }
+                });
+              }
+              return false;
+            }
+            if (data.callback) {
+              return window[data.callback](data.data);
+            } else if (data.url) window.location.href = data.url;
+            else if (data.wms) wms("", data.wms);
+            else wmsc();
+          }
+        });
+      }
+      function form_data(name, token = null) {
+        var data = {};
+        var n = 0;
+        var k = "";
+        var v = "";
+        $("form[name=" + name + "] .input").each(function () {
+          n = $(this).attr("rel") - 0;
+          k = $(this).attr("name");
+          if ($(this).prop("type") == "checkbox") {
+            v = $(this).prop("checked") ? $(this).val() : 0;
+            if (!v) return;
+          } else if ($(this).prop("type") == "radio") {
+            v = $(this).prop("checked") ? $(this).val() : 0;
+            if (!v) return;
+          } else {
+            v = $(this).val();
+          }
+          if (n > 0) {
+            if (!data[n]) data[n] = {};
+            if (data[n][k] != undefined) {
+              if (typeof data[n][k] == "string") data[n][k] = [data[n][k]];
+              data[n][k].push(v);
+            } else {
+              data[n][k] = v;
+            }
+          } else {
+            if (data[k]) {
+              if (typeof data[k] == "string") data[k] = [data[k]];
+              data[k].push(v);
+            } else {
+              data[k] = v;
+            }
+          }
+        });
+        if (isCaptcha) {
+          if (token != null) {
+            data["captcha"] = token;
+            data["recaptcha_v"] = "v3";
+          }
+          if ($("#captcha > div").html()) {
+            data["captcha"] = grecaptcha.getResponse();
+            data["recaptcha_v"] = "v2";
+          }
+        }
+        if (additional_data.length > 0) {
+          for (var i in additional_data) {
+            data[additional_data[i].rel] = additional_data[i].val;
+          }
+        }
+        return data;
+      }
+      function form_error(name, err) {
+        $("form[name=" + name + "]")
+          .find(".has-error")
+          .removeClass("has-error");
+        $("form[name=" + name + "]")
+          .find("p.help-block")
+          .remove();
+        if (!err) {
+          return false;
+        }
+        for (var i in err) {
+          var id = name + "_" + i;
+          $("#" + id)
+            .parent()
+            .addClass("has-error")
+            .append('<p class="help-block">' + err[i] + "</p>");
+          $("#" + id).shake();
+        }
+        if (err["captcha"] && $("#captcha").html() == "") {
+          grecaptcha.render("captcha", { sitekey: "6LeY5nodAAAAAHSTuFl7brZQXJGMr7g8rft6HpPD" });
+        }
+        return true;
+      }
+
+      function wms(title, text, big) {
+        var txt = "";
+        if (title != "") txt += '<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4 class="modal-title">' + (title != "" ? title : "dev.esnadm.com") + "</h4></div>";
+        txt += '<div class="modal-body">' + text + "</div>";
+        $("#wms .modal-content").html(txt);
+        $("#wms").modal();
+        if (big) {
+          $("#wms .modal-dialog").css({ width: "80%", height: "80%" });
+        }
+      }
+
+      function wmsc() {
+        $("#wms .modal-content").html("");
+        $("#wms").modal("hide");
+      }
+
+      function block(e, k) {
+        $(e).css("opacity", k);
+        if (k < 1) {
+          $(e).css("pointer-events", "none");
+          $(e).css("position", "relative");
+          $(e).append('<div class="iblock"></div>');
+        } else {
+          $(e).css("pointer-events", "auto");
+          $(e).css("position", "");
+          $(e).find(".iblock").remove();
+          $(e).removeClass("iblock_act");
+        }
+      }
+
+      function tips() {
+        $(".tt").tooltip();
+      }
+
+      function search_list(rid, func, act, type, callback, e) {
+        var ajax = rid + "_" + func;
+        var list = ajax + "_" + act;
+        var block = list + "_block";
+        if ($(e).val() == "") {
+          window[callback](e, this);
+          $("#" + block).remove();
+        } else {
+          $.ajax({
+            data: {
+              rid: rid,
+              ajax: ajax,
+              data: {
+                game_id: game_id,
+                type: type,
+                title: $(e).val(),
+              },
+            },
+          }).done(function (data) {
+            if (data.err != undefined) {
+              var form_name = $(e).closest("form").attr("name");
+              if (form_name != undefined && form_error(form_name, data.err)) {
+                return false;
+              }
+            }
+            if (!$("#" + block).length) {
+              $(e).after('<div rel="dropdown_block" class="dropdown open" id="' + block + '" data_blocks="' + $(e).attr("id") + '"><ul class="dropdown-menu" id="' + list + '"></ul></div>');
+            }
+            $("#" + list).html("");
+            for (var type in data) {
+              if (data[type].length > 0) {
+                global_search_result[type] = {};
+                $("#" + list).append('<li class="dropdown-header">' + type + "</li>");
+                for (var i in data[type]) {
+                  var c = data[type][i];
+                  global_search_result[type][c.id] = c;
+                  if (c.cid != undefined) {
+                    $("#" + list).append('<li><a href="javascript:;" data-type="' + type + '" rel="' + rid + '" title="' + (c.id != undefined ? c.id : 0) + '">' + (c.cid > 0 ? '<img height="12px" src="/media/flags/' + c.cid + '.svg"> ' : "") + c.title + (c.name != undefined ? " (" + c.name + ")" : "") + "</a></li>");
+                  } else {
+                    $("#" + list).append('<li><a href="javascript:;" data-type="' + type + '" rel="' + rid + '" title="' + (c.id != undefined ? c.id : 0) + '">' + c.title + "</a></li>");
+                  }
+                }
+              }
+            }
+            $("#" + list + " a[rel=" + rid + "]").click(function () {
+              window[callback](e, this);
+              $("#" + block).remove();
+            });
+          });
+        }
+      }
+
+      function viewjson(rid, ajax, id) {
+        $.ajax({
+          dataType: "html",
+          data: {
+            rid: rid,
+            ajax: ajax,
+            data: {
+              id: id,
+            },
+          },
+        }).done(function (txt) {
+          let jsonHTML = new jsonOutput({
+            input: txt,
+          });
+          wms("", jsonHTML.html());
+        });
+      }
+
+      function convert_time() {
+        var y = new Date().getFullYear();
+        $(".sct").each(function () {
+          var txt = $(this).attr("datetime");
+          if (txt == undefined) {
+            txt = $(this).text();
+            $(this).attr("datetime", txt);
+          }
+          var format = $(this).attr("data-format");
+          var opt = $(this).attr("data-opt");
+          $(this).html(convert_date(format, txt, y, opt));
+          $(this).attr("oncopy", "get_unix_time(this)");
+        });
+      }
+      function get_unix_time(e) {
+        if (!navigator.clipboard) {
+          return;
+        }
+        var ut = unixtime($(e).attr("datetime"));
+        if (ut > 0) {
+          ut += utime;
+          var d = new Date(ut * 1000);
+          var datestring = d.getUTCFullYear() + "-" + ("0" + (d.getUTCMonth() + 1)).slice(-2) + "-" + ("0" + d.getUTCDate()).slice(-2) + " " + ("0" + d.getUTCHours()).slice(-2) + ":" + ("0" + d.getUTCMinutes()).slice(-2);
+          navigator.clipboard.writeText(datestring);
+        }
+      }
+      function unixtime(a) {
+        if (a == 0 || a == undefined) {
+          return 0;
+        }
+        var ut = 0;
+        if (a.match(/^\d+$/)) {
+          ut = a - 0;
+        } else if ((a = a.match(/^(\d{4})-(\d{2})-(\d{2})( (\d{2}):(\d{2}):(\d{2}))?$/))) {
+          if (a[1] == "0000") {
+            return 0;
+          }
+          if (a[4] == undefined) {
+            a[5] = 0;
+            a[6] = 0;
+            a[7] = 0;
+          }
+          ut = Math.floor(Date.UTC(a[1], a[2] - 1, a[3], a[5], a[6], a[7]) / 1000);
+        } else {
+          ut = 0;
+        }
+        return ut;
+      }
+      function convert_date(format, txt, y, opt) {
+        if (!format) {
+          return "";
+        }
+        var parts = format.match(/%\w+%/gi);
+        var ut = unixtime(txt);
+        if (ut > 0) {
+          ut += utime;
+          var data = new Date(ut * 1000);
+        }
+        var month = { 0: "января", 1: "февраля", 2: "марта", 3: "апреля", 4: "мая", 5: "июня", 6: "июля", 7: "августа", 8: "сентября", 9: "октября", 10: "ноября", 11: "декабря" };
+        if (parts) {
+          var times = [];
+          if (ut > 0) {
+            for (var j in parts) {
+              if (parts[j] == "%j%") {
+                times[j] = data.getUTCDate();
+              } else if (parts[j] == "%m%") {
+                times[j] = month[data.getUTCMonth()];
+              } else if (parts[j] == "%ms%") {
+                times[j] = month[data.getUTCMonth()].substr(0, 3);
+              } else if (parts[j] == "%y%") {
+                if (data.getUTCFullYear() != y) {
+                  times[j] = data.getUTCFullYear();
+                  if (opt == "ynt") {
+                    format = format.replace(", %h%:%i%", "");
+                  }
+                } else {
+                  format = format.replace(/,?\s?%y%/, "");
+                  times[j] = "";
+                }
+              } else if (parts[j] == "%h%") {
+                times[j] = ("0" + data.getUTCHours()).slice(-2);
+              } else if (parts[j] == "%i%") {
+                times[j] = ("0" + data.getUTCMinutes()).slice(-2);
+              } else if (parts[j] == "%tz%") {
+                times[j] = timezone[tz];
+              }
+            }
+          }
+          for (var j in parts) {
+            format = format.replace(parts[j], times[j]);
+          }
+        }
+        return format;
+      }
+      function convert_duration() {
+        $(".scd").each(function () {
+          var dur = $(this).attr("datetime");
+          if (dur == undefined) {
+            dur = $(this).text();
+            $(this).attr("datetime", dur);
+          }
+          if (dur != "") {
+            dur = dur - 0;
+            var z = "";
+            if (dur < 0) {
+              z = "-";
+              dur = Math.abs(dur);
+            }
+            var h = Math.floor(dur / 3600);
+            var m = Math.floor((dur - h * 3600) / 60);
+            var s = dur - h * 3600 - m * 60;
+            dur = z + (h ? h + ":" : "") + ("0" + m).slice(-2) + ":" + ("0" + s).slice(-2);
+            $(this).html(dur);
+          }
+        });
+      }
+
+      function pages(form_name, page) {
+        $("form[name=" + form_name + "] input[name=page]").val(page);
+        sform(form_name);
+      }
+
+      function set_html(data) {
+        $("#" + data.id).html(data.html);
+        convert_time();
+      }
+
+      function log_action(id) {
+        $.ajax({
+          dataType: "html",
+          data: {
+            rid: "logs",
+            ajax: "action",
+            data: {
+              id: id,
+            },
+          },
+        }).done(function (txt) {
+          wms("", txt, 1);
+        });
+      }
+
+      $(document).ready(function () {
+        jQuery.browser = {};
+        (function () {
+          jQuery.browser.msie = false;
+          jQuery.browser.version = 0;
+          if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+            jQuery.browser.msie = true;
+            jQuery.browser.version = RegExp.$1;
+          }
+        })();
+
+        $.ajaxSetup({
+          type: "POST",
+          dataType: "json",
+        });
+
+        convert_time();
+        convert_duration();
+
+        if ($("#pages_actions").length > 0) {
+          setInterval(function () {
+            check_logs_actions();
+          }, 10000);
+        }
+
+        if ($("#pages_tasks").length > 0) {
+          setInterval(function () {
+            check_logs_tasks();
+          }, 10000);
+        }
+
+        var c = new Date().getTimezoneOffset() * -1;
+        var time = Math.floor(Date.now() / 1000) - c * 60 + tz * 60;
+        var d = new Date(time * 1000);
+        var tz_title = "MSK";
+        $("#utime").html(("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + " " + tz_title);
+
+        $(".search_list").each(function () {
+          var id = $(this).attr("id");
+          var rid = $(this).attr("search-rid");
+          var func = $(this).attr("search-func");
+          var act = $(this).attr("search-act");
+          var type = $(this).attr("search-type");
+          var callback = $(this).attr("search-callback");
+          $("#" + id).keyup(function () {
+            var e = this;
+            if (globalTimeout != null) clearTimeout(globalTimeout);
+            globalTimeout = setTimeout(function () {
+              search_list(rid, func, act, type, callback, e);
+            }, 400);
+          });
+        });
+
+        $("body").click(function (e) {
+          $("div[rel=dropdown_block]").each(function () {
+            var id = $(this).attr("id");
+            var blocks = $(this).attr("data_blocks");
+            var close = 1;
+            if (blocks != undefined) {
+              blocks = blocks.split(",");
+              if (blocks.indexOf(e.target.id) >= 0) {
+                close = 0;
+              }
+            }
+            if (close) {
+              $("#" + id).remove();
+            }
+          });
+        });
+
+        tips();
+
+        if ($("#wms .modal-content").html() != "") {
+          wms("", $("#wms .modal-content").html());
+        }
+
+        $("#menu-toggle").click(function () {
+          $("#wrapper").toggleClass("toggled");
+          $(this).toggleClass("active");
+        });
+
+        $(".loader").each(function () {
+          var t = $(this).attr("data-title");
+          if (t) {
+            var n = $(this).attr("data-input");
+            var r = $(this).attr("data-rel");
+            var i = $(this).attr("data-id");
+            if ($(this).attr("data-preview") != undefined) {
+              var pr = $(this).attr("data-preview").split(",");
+            } else {
+              var pr = ["logo", "logo2"];
+            }
+            var uploader = new qq.FineUploader({
+              element: $(this)[0],
+              classes: {
+                button: "button-" + t + r,
+              },
+              request: {
+                endpoint: "/file?name=" + t + "&id=" + i,
+                rel: r,
+                name: n,
+                preview: pr,
+              },
+              validation: {
+                sizeLimit: 10000000,
+                count: 1,
+              },
+            });
+          }
+        });
+
+        $.fn.shake = function () {
+          var pos;
+          return this.each(function () {
+            pos = $(this).css("position");
+            if (!pos || pos === "static") {
+              $(this).css("position", "relative");
+            }
+            for (var x = 1; x <= 3; x++) {
+              $(this).animate({ left: -2 }, 17).animate({ left: 2 }, 34).animate({ left: 0 }, 17);
+            }
+          });
+        };
+      });
+    </script>
+    <script>
+      function search_callback_tournaments(parent, e) {
+        var id = $(e).attr("title");
+        $("#filter_tournament_id").val(id);
+        $("#filter_stage_id").val(0);
+        $("#filter_round_id").val(0);
+        $("#filter_team_1").val(0);
+        $("#filter_team_2").val(0);
+        $("#filter").submit();
+      }
+
+      function search_callback_teams(parent, e) {
+        var id = $(e).attr("title");
+        $(parent).val(id);
+        $("#filter").submit();
+      }
+
+      function filter_clear_game() {
+        $("#filter_tournament_id").val(0);
+        $("#filter_stage_id").val(0);
+        $("#filter_round_id").val(0);
+        $("#filter_team_1").val(0);
+        $("#filter_team_2").val(0);
+      }
+
+      function filter_clear_stage() {
+        $("#filter_round_id").val(0);
+      }
+
+      function delete_row(match_id) {
+        block($("#tr-" + match_id), 0.2);
+        $.ajax({
+          data: {
+            rid: "matches",
+            ajax: "delete",
+            data: {
+              match_id: match_id,
+            },
+          },
+        }).done(function (data) {
+          if (data.status == 1) {
+            set_html({ id: "matches_list", html: data.html });
+          } else if (data.err != undefined) {
+            wms("", data.err.msg);
+            block($("#tr-" + match_id), 1.0);
+          }
+        });
+      }
+
+      function fast_add() {
+        $("#update_8_fast").val("1");
+        sform("update");
+      }
+
+      function matches_list(data) {
+        $("#update_1_t1").val("0");
+        $("#update_1_t2").val("0");
+        $("#update_1_t1s").val("");
+        $("#update_1_t2s").val("");
+        set_html({ id: "matches_list", html: data.html });
+        block($("form[name=update]"), 1.0);
+      }
+
+      function get_rounds(stage_id) {
+        var $rounds = $("form[name=update] select[name=round]");
+        $rounds.empty();
+        $rounds.append($("<option>", { value: 0 }).text("Выбрать"));
+        get_tabs(0);
+        if (!stage_id) {
+          return;
+        }
+        $.ajax({
+          data: {
+            rid: "rounds",
+            ajax: "rounds",
+            data: {
+              stage_id: stage_id,
+            },
+          },
+        }).done(function (data) {
+          $.each(data, function (key, value) {
+            $rounds.append($("<option>", { value: value.id }).text(value.title));
+          });
+        });
+      }
+
+      function get_tabs(round_id) {
+        var $tabs = $("form[name=update] select[name=rtab]");
+        $tabs.empty();
+        $tabs.append($("<option>", { value: 0 }).text("Субраунд"));
+        if (!round_id) {
+          return;
+        }
+        $.ajax({
+          data: {
+            rid: "tabs",
+            ajax: "tabs",
+            data: {
+              round_id: round_id,
+            },
+          },
+        }).done(function (data) {
+          $.each(data, function (key, value) {
+            $tabs.append($("<option>", { value: value.id }).text(value.title));
+          });
+        });
+      }
+
+      function window_match_api(match_id) {
+        $.ajax({
+          dataType: "text",
+          data: {
+            rid: "api",
+            ajax: "window_match",
+            data: {
+              match_id: match_id,
+            },
+          },
+        }).done(function (txt) {
+          wms("", txt);
+        });
+      }
+
+      function sform_confirm() {
+        $("#pconfirm").val("1");
+        sform("window_match_upd");
+      }
+
+      function window_match_api_save(data) {
+        wmsc();
+        var cl = "btn-danger";
+        var vc = $("#btn_api_" + data.match_id).attr("data-vc") - 0;
+        var defwin = $("#btn_api_" + data.match_id).attr("data-defwin") - 0;
+        if (defwin) {
+          cl = "btn-primary";
+        } else {
+          var game_id = 582;
+          if (game_id == 100) {
+            if (data.api) {
+              cl = "btn-primary";
+            }
+          } else if (vc > 0 && data.api > 0) {
+            if (vc > data.api) {
+              cl = "btn-warning";
+            } else {
+              cl = "btn-primary";
+            }
+          }
+        }
+        $("#btn_api_" + data.match_id).attr("class", "btn " + cl + " btn-xs");
+      }
+
+      function window_match_stream(match_id) {
+        $.ajax({
+          dataType: "text",
+          data: {
+            rid: "matches",
+            ajax: "window_match_stream",
+            data: {
+              match_id: match_id,
+            },
+          },
+        }).done(function (txt) {
+          wms("", txt);
+        });
+      }
+
+      function window_match_stream_forall(match_id) {
+        if ($("#match_window_games input[name=forall]").prop("checked") == true) {
+          $.ajax({
+            data: {
+              rid: "matches",
+              ajax: "window_match_stream_forall",
+              data: {
+                match_id: match_id,
+              },
+            },
+          }).done(function (data) {
+            $("#forall_count").html(" (матчей: " + data.matches + ")");
+          });
+        } else {
+          $("#forall_count").html("");
+        }
+      }
+
+      function window_match_stream_save(data) {
+        wmsc();
+        var i, cl;
+        for (i in data.matches) {
+          if ($("#btn_stream_" + data.matches[i]) == undefined) {
+            continue;
+          }
+          if (data.stream) {
+            cl = "btn-primary";
+          } else {
+            cl = "btn-danger";
+          }
+          $("#btn_stream_" + data.matches[i]).attr("class", "btn " + cl + " btn-xs");
+        }
+      }
+
+      function window_match_video(match_id) {
+        $.ajax({
+          dataType: "text",
+          data: {
+            rid: "matches",
+            ajax: "window_match_video",
+            data: {
+              match_id: match_id,
+            },
+          },
+        }).done(function (txt) {
+          wms("", txt);
+        });
+      }
+
+      function window_match_video_save(data) {
+        wmsc();
+        var cl = "btn-danger";
+        var vc = $("#btn_video_" + data.match_id).attr("data-vc") - 0;
+        if (vc > 0 && data.video > 0) {
+          if (vc > data.video) {
+            cl = "btn-warning";
+          } else {
+            cl = "btn-primary";
+          }
+        }
+        $("#btn_video_" + data.match_id).attr("class", "btn " + cl + " btn-xs");
+      }
+    </script>
+
+    <div class="modal-backdrop fade in"></div>
+  </body>
+</html>
