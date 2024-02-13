@@ -2377,24 +2377,24 @@ figure{
     border-color: #444;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .admin .form-horizontal .control-label {
         padding-top: 0;
     }
-}
+} */
 .admin .form-horizontal .form-group {
-    margin-left: -15px;
+    /* margin-left: -15px;
     margin-right: -15px;
-    display: flex;
+    display: flex; */
 }
 .admin .form-horizontal .form-group .label {
-    display: flex;
+    /* display: flex;
     max-width: 100%;
     margin-bottom: 0;
     font-weight: bold;
     align-items: center;
     align-self: center;
-    justify-content: end;
+    justify-content: end; */
 }
 .admin .form-control {
     height: 35px;
