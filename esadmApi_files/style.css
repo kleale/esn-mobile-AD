@@ -2367,7 +2367,7 @@ figure{
 
 
 .admin .form-group {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .admin .form-control[disabled], .admin .form-control[readonly], .admin fieldset[disabled] .form-control {

@@ -29,7 +29,7 @@
       }
     </style>
   </head>
-  <body class="admin sidebar-mini layout-fixed layout-navbar-fixed modal-open" style="">
+  <body class="admin sidebar-mini layout-fixed layout-navbar-fixed">
     <div id="wrapper">
       <aside class="main-sidebar sidebar-dark-primary elevation-4 os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition">
         <div class="brand-link">
@@ -263,67 +263,100 @@
                     </div>
                   </form>
                 </div>
-                <div class="col" style="flex-basis: 400px; max-width: 400px; min-width: 400px">
-                  <div class="panel panel-default">
-                    <div class="panel-body">
-                      <form action="https://dev.esnadm.com/matches" method="GET" name="filter" id="filter">
-                        <div class="form-group">
-                          <label>Дисциплина</label>
-                          <select name="game_id" id="filter_game_id" class="form-control" onchange="filter_clear_game(); $(&#39;#filter&#39;).submit()">
-                            <option value="0">Выбрать</option>
-                            <option value="704">CS:GO</option>
-                            <option value="582" selected="">Dota 2</option>
-                            <option value="300">Fortnite</option>
-                            <option value="755">Hearthstone</option>
-                            <option value="313">LoL</option>
-                            <option value="800">Overwatch</option>
-                            <option value="100">PUBG</option>
-                            <option value="600">Rainbow Six</option>
-                            <option value="200">Valorant</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label>Турнир</label>
-                          <input name="tournament_id" id="filter_tournament_id" value="8286" type="hidden" />
-                          <input id="filter_tournament_title" value="EPL World AM S8" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="tournaments" search-callback="search_callback_tournaments" autocomplete="off" />
-                        </div>
-                        <div class="form-group">
-                          <label>Стадия</label>
-                          <select name="stage_id" id="filter_stage_id" class="form-control" onchange="filter_clear_stage(); $(&#39;#filter&#39;).submit()">
-                            <option value="0">Выбрать</option>
-                            <optgroup label="Стадии">
-                              <option value="32802">Group Stage</option>
-                              <option value="32803">Playoff</option>
-                            </optgroup>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label>Раунд</label>
-                          <select name="round_id" id="filter_round_id" class="form-control" onchange="$(&#39;#filter&#39;).submit()">
-                            <option value="0">Выбрать</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label>Команда 1</label>
-                          <input name="team_1" id="filter_team_1" value="" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="teams" search-callback="search_callback_teams" autocomplete="off" />
-                        </div>
-                        <div class="form-group">
-                          <label>Команда 2</label>
-                          <input name="team_2" id="filter_team_2" value="" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="teams" search-callback="search_callback_teams" autocomplete="off" />
-                        </div>
-                        <button type="submit" class="btn btn-block btn-default">Найти</button>
+                <div id="leftCol" class="col leftCol">
+                  <style>
+                    .leftCol{
+                      position: relative;
+                    }
+                    .leftCol.show{
+                      flex-basis: 400px; max-width: 400px; min-width: 400px;
+                    }
+                    .leftCol.hideme{
+                      flex-basis: 40px; max-width: 40px; min-width: 40px;
+                    }
+                    .columnchanger{
+                      position: absolute;
+                      top: 0;
+                      left: -14px;
+                      background: #353a41;
+                      padding: 4px 3px;
+                      border-radius: 3px;
+                      cursor: pointer;
+                    }
+                  </style>
+                  <a class="columnchanger" onclick="colToggler()"><span><i id="chevron" class="fa fa-chevron-right"></i></span></a>
+                    <script>
+                      function colToggler() {
+                        var left = $('#colToggled');
+                        var col = $('#leftCol');
+                        var chevron = $('#chevron');
+                        left.hasClass('hidden') ? ( left.removeClass('hidden')) : left.addClass("hidden")
+                        left.hasClass('hidden') ? ( left.addClass('hideme')) : left.removeClass("hideme")
+                        left.hasClass('hidden') ? ( chevron.addClass('fa-chevron-left').removeClass('fa-chevron-right')) : chevron.addClass("fa-chevron-right").removeClass('fa-chevron-left')
+                      }
+                    </script>
+                  <div id="colToggled">
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <form action="https://dev.esnadm.com/matches" method="GET" name="filter" id="filter">
+                          <div class="form-group">
+                            <label>Дисциплина</label>
+                            <select name="game_id" id="filter_game_id" class="form-control" onchange="filter_clear_game(); $(&#39;#filter&#39;).submit()">
+                              <option value="0">Выбрать</option>
+                              <option value="704">CS:GO</option>
+                              <option value="582" selected="">Dota 2</option>
+                              <option value="300">Fortnite</option>
+                              <option value="755">Hearthstone</option>
+                              <option value="313">LoL</option>
+                              <option value="800">Overwatch</option>
+                              <option value="100">PUBG</option>
+                              <option value="600">Rainbow Six</option>
+                              <option value="200">Valorant</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Турнир</label>
+                            <input name="tournament_id" id="filter_tournament_id" value="8286" type="hidden" />
+                            <input id="filter_tournament_title" value="EPL World AM S8" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="tournaments" search-callback="search_callback_tournaments" autocomplete="off" />
+                          </div>
+                          <div class="form-group">
+                            <label>Стадия</label>
+                            <select name="stage_id" id="filter_stage_id" class="form-control" onchange="filter_clear_stage(); $(&#39;#filter&#39;).submit()">
+                              <option value="0">Выбрать</option>
+                              <optgroup label="Стадии">
+                                <option value="32802">Group Stage</option>
+                                <option value="32803">Playoff</option>
+                              </optgroup>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Раунд</label>
+                            <select name="round_id" id="filter_round_id" class="form-control" onchange="$(&#39;#filter&#39;).submit()">
+                              <option value="0">Выбрать</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Команда 1</label>
+                            <input name="team_1" id="filter_team_1" value="" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="teams" search-callback="search_callback_teams" autocomplete="off" />
+                          </div>
+                          <div class="form-group">
+                            <label>Команда 2</label>
+                            <input name="team_2" id="filter_team_2" value="" type="text" class="form-control search_list" search-rid="search" search-func="list" search-act="search" search-type="teams" search-callback="search_callback_teams" autocomplete="off" />
+                          </div>
+                          <button type="submit" class="btn btn-block btn-default">Найти</button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="panel panel-default panel-login">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Логи</h3>
+                      </div>
+                      <form action="https://dev.esnadm.com/logs" method="POST" name="actions" id="form_actions" class="form-horizontal" style="opacity: 1; pointer-events: auto">
+                        <input name="page" value="" type="hidden" class="input" />
+                        <input name="last_action_id" value="0" type="hidden" class="input" />
+                        <div id="pages_actions"><div class="panel-body">–</div></div>
                       </form>
                     </div>
-                  </div>
-                  <div class="panel panel-default panel-login">
-                    <div class="panel-heading">
-                      <h3 class="panel-title">Логи</h3>
-                    </div>
-                    <form action="https://dev.esnadm.com/logs" method="POST" name="actions" id="form_actions" class="form-horizontal" style="opacity: 1; pointer-events: auto">
-                      <input name="page" value="" type="hidden" class="input" />
-                      <input name="last_action_id" value="0" type="hidden" class="input" />
-                      <div id="pages_actions"><div class="panel-body">–</div></div>
-                    </form>
                   </div>
                 </div>
               </div>
@@ -333,7 +366,7 @@
       </div>
     </div>
 
-    <div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block">
+    <!-- <div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block">
       <div class="modal-dialog" style="width: 1000px">
         <div class="modal-content">
      
@@ -373,7 +406,7 @@
        
         </div>
       </div>
-    </div>
+    </div> -->
     <script>
       var lang = "ru";
       var tz = 180;
@@ -1202,6 +1235,6 @@
       }
     </script>
 
-    <div class="modal-backdrop fade in"></div>
+    <!-- <div class="modal-backdrop fade in"></div> -->
   </body>
 </html>
