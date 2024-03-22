@@ -268,11 +268,11 @@
                     .leftCol{
                       position: relative;
                     }
-                    .leftCol.show{
+                    .leftCol{
                       flex-basis: 400px; max-width: 400px; min-width: 400px;
                     }
                     .leftCol.hideme{
-                      flex-basis: 40px; max-width: 40px; min-width: 40px;
+                      flex-basis: 1px; max-width: 1px; min-width: 1px; padding: 0;
                     }
                     .columnchanger{
                       position: absolute;
@@ -291,7 +291,7 @@
                         var col = $('#leftCol');
                         var chevron = $('#chevron');
                         left.hasClass('hidden') ? ( left.removeClass('hidden')) : left.addClass("hidden")
-                        left.hasClass('hidden') ? ( left.addClass('hideme')) : left.removeClass("hideme")
+                        left.hasClass('hidden') ? ( col.addClass('hideme')) : col.removeClass("hideme")
                         left.hasClass('hidden') ? ( chevron.addClass('fa-chevron-left').removeClass('fa-chevron-right')) : chevron.addClass("fa-chevron-right").removeClass('fa-chevron-left')
                       }
                     </script>
