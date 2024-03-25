@@ -31,10 +31,74 @@
   </head>
   <body class="admin sidebar-mini layout-fixed layout-navbar-fixed">
     <div id="wrapper">
-      <aside class="main-sidebar sidebar-dark-primary elevation-4 os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition">
+      <aside id="asideToggled" class="main-sidebar sidebar-dark-primary elevation-4 os-host os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition">
         <div class="brand-link">
           <a href="https://dev.esnadm.com/"><img src="./esadmApi_files/logo_gt_footer.png" class="png" /></a>
           <a href="javascript:;" class="gttime" onclick="get_time()"><i class="fa fa-fw fa-clock-o"></i><span id="utime" class="utime">22:08 MSK</span> <span class="caret"></span></a>
+          <a class="columnchanger1" onclick="colToggler1()"
+            ><span><i id="chevron1" class="fa fa-chevron-left"></i></span
+          ></a>
+          <style>
+            .brand-link {
+              position: relative;
+            }
+            .columnchanger1 {
+              position: absolute;
+              top: 0;
+              height: 100%;
+              border-left: 1px solid #4f5962;
+              right: 1px;
+              padding: 4px 3px;
+              cursor: pointer;
+              line-height: 50px;
+              width: 20px;
+            }
+            .columnchanger1:hover {
+              background-color: #eeeeee20;
+            }
+            .smallAside.layout-fixed aside {
+              width: 80px;
+            }
+            .smallAside .content-wrapper {
+              margin-left: 80px;
+            }
+            .smallAside.layout-fixed .main-sidebar .brand-link {
+              flex-direction: column;
+              padding: 5px 21px 5px 0;
+            }
+            .smallAside #main-nav {
+              padding: 0;
+            }
+            .smallAside .user-panel {
+              padding: 10px 5px;
+            }
+            .smallAside .sidebar .user-panel .info {
+              overflow: hidden;
+              flex-direction: column;
+            }
+            .smallAside .gttime {
+              font-size: 10px;
+              margin: 0px;
+              padding: 4px 5px;
+            }
+            .smallAside .gttime i, .smallAside .gttime .caret{
+              display: none;
+            }
+            .smallAside.layout-fixed .main-sidebar .brand-link img {
+              width: 50px;
+            }
+            .smallAside .sidebar .nav-pills > li > a {
+              padding: 3px 5px;
+            }
+          </style>
+          <script>
+            function colToggler1() {
+              var aside = $("#asideToggled");
+              var chevron1 = $("#chevron1");
+              $("body").hasClass("smallAside") ? $("body").removeClass("smallAside") : $("body").addClass("smallAside");
+              $("body").hasClass("smallAside") ? chevron1.addClass("fa-chevron-left").removeClass("fa-chevron-right") : chevron1.addClass("fa-chevron-right").removeClass("fa-chevron-left");
+            }
+          </script>
         </div>
         <div class="sidebar">
           <div class="user-panel">
@@ -265,16 +329,21 @@
                 </div>
                 <div id="leftCol" class="col leftCol">
                   <style>
-                    .leftCol{
+                    .leftCol {
                       position: relative;
                     }
-                    .leftCol{
-                      flex-basis: 400px; max-width: 400px; min-width: 400px;
+                    .leftCol {
+                      flex-basis: 400px;
+                      max-width: 400px;
+                      min-width: 400px;
                     }
-                    .leftCol.hideme{
-                      flex-basis: 1px; max-width: 1px; min-width: 1px; padding: 0;
+                    .leftCol.hideme {
+                      flex-basis: 1px;
+                      max-width: 1px;
+                      min-width: 1px;
+                      padding: 0;
                     }
-                    .columnchanger{
+                    .columnchanger {
                       position: absolute;
                       top: 0;
                       left: -14px;
@@ -284,17 +353,19 @@
                       cursor: pointer;
                     }
                   </style>
-                  <a class="columnchanger" onclick="colToggler()"><span><i id="chevron" class="fa fa-chevron-right"></i></span></a>
-                    <script>
-                      function colToggler() {
-                        var left = $('#colToggled');
-                        var col = $('#leftCol');
-                        var chevron = $('#chevron');
-                        left.hasClass('hidden') ? ( left.removeClass('hidden')) : left.addClass("hidden")
-                        left.hasClass('hidden') ? ( col.addClass('hideme')) : col.removeClass("hideme")
-                        left.hasClass('hidden') ? ( chevron.addClass('fa-chevron-left').removeClass('fa-chevron-right')) : chevron.addClass("fa-chevron-right").removeClass('fa-chevron-left')
-                      }
-                    </script>
+                  <a class="columnchanger" onclick="colToggler()"
+                    ><span><i id="chevron" class="fa fa-chevron-right"></i></span
+                  ></a>
+                  <script>
+                    function colToggler() {
+                      var left = $("#colToggled");
+                      var col = $("#leftCol");
+                      var chevron = $("#chevron");
+                      left.hasClass("hidden") ? left.removeClass("hidden") : left.addClass("hidden");
+                      left.hasClass("hidden") ? col.addClass("hideme") : col.removeClass("hideme");
+                      left.hasClass("hidden") ? chevron.addClass("fa-chevron-left").removeClass("fa-chevron-right") : chevron.addClass("fa-chevron-right").removeClass("fa-chevron-left");
+                    }
+                  </script>
                   <div id="colToggled">
                     <div class="panel panel-default">
                       <div class="panel-body">
