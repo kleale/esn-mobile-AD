@@ -35,70 +35,6 @@
         <div class="brand-link">
           <a href="https://dev.esnadm.com/"><img src="./esadmApi_files/logo_gt_footer.png" class="png" /></a>
           <a href="javascript:;" class="gttime" onclick="get_time()"><i class="fa fa-fw fa-clock-o"></i><span id="utime" class="utime">22:08 MSK</span> <span class="caret"></span></a>
-          <a class="columnchanger1" onclick="colToggler1()"
-            ><span><i id="chevron1" class="fa fa-chevron-left"></i></span
-          ></a>
-          <style>
-            .brand-link {
-              position: relative;
-            }
-            .columnchanger1 {
-              position: absolute;
-              top: 0;
-              height: 100%;
-              border-left: 1px solid #4f5962;
-              right: 1px;
-              padding: 4px 3px;
-              cursor: pointer;
-              line-height: 50px;
-              width: 20px;
-            }
-            .columnchanger1:hover {
-              background-color: #eeeeee20;
-            }
-            .smallAside.layout-fixed aside {
-              width: 80px;
-            }
-            .smallAside .content-wrapper {
-              margin-left: 80px;
-            }
-            .smallAside.layout-fixed .main-sidebar .brand-link {
-              flex-direction: column;
-              padding: 5px 21px 5px 0;
-            }
-            .smallAside #main-nav {
-              padding: 0;
-            }
-            .smallAside .user-panel {
-              padding: 10px 5px;
-            }
-            .smallAside .sidebar .user-panel .info {
-              overflow: hidden;
-              flex-direction: column;
-            }
-            .smallAside .gttime {
-              font-size: 10px;
-              margin: 0px;
-              padding: 4px 5px;
-            }
-            .smallAside .gttime i, .smallAside .gttime .caret{
-              display: none;
-            }
-            .smallAside.layout-fixed .main-sidebar .brand-link img {
-              width: 50px;
-            }
-            .smallAside .sidebar .nav-pills > li > a {
-              padding: 3px 5px;
-            }
-          </style>
-          <script>
-            function colToggler1() {
-              var aside = $("#asideToggled");
-              var chevron1 = $("#chevron1");
-              $("body").hasClass("smallAside") ? $("body").removeClass("smallAside") : $("body").addClass("smallAside");
-              $("body").hasClass("smallAside") ? chevron1.addClass("fa-chevron-left").removeClass("fa-chevron-right") : chevron1.addClass("fa-chevron-right").removeClass("fa-chevron-left");
-            }
-          </script>
         </div>
         <div class="sidebar">
           <div class="user-panel">
@@ -165,20 +101,20 @@
           </ol>
 
           <div class="columnTogglePanel">
-            <a onclick="colToggler()">
+            <a id="closerRight" onclick="colTogglerLeft()">
               <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
                 <path d="M9 4l0 16" />
               </svg>
             </a>
-            <a class="active" onclick="colToggler1()">
+            <a id="allCols" class="active" onclick="colTogglerClear()">
               <svg xmlns="http://www.w3.org/2000/svg"  width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M3 3m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v16a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1zm6 -1v18m6 -18v18" />
               </svg>
             </a>
-            <a onclick="colToggler1()">
+            <a id="closerLeft" onclick="colTogglerRight()">
               <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
@@ -186,6 +122,38 @@
               </svg>
             </a>
           </div>
+
+          <script>
+            function colTogglerLeft() {
+              $("#asideToggled").addClass("hidden")
+              $("body").addClass("smallAside")
+              $("#closerRight").addClass("active")
+              $("#allCols").removeClass("active")
+              $("#closerLeft").removeClass("active")
+            }
+  
+            function colTogglerRight() {
+              $("#leftCol").addClass("hidden")
+              $("#closerRight").removeClass("active")
+              $("#allCols").removeClass("active")
+              $("#closerLeft").addClass("active")
+            }
+
+            function colTogglerClear() {
+              $("body").removeClass("smallAside")
+              $("#asideToggled").removeClass("hidden")
+              $("#leftCol").removeClass("hidden")
+              $("#closerRight").removeClass("active")
+              $("#allCols").addClass("active")
+              $("#closerLeft").removeClass("active")
+            }
+          </script>
+
+          <style>
+            .smallAside .content-wrapper {
+              margin-left: 0px;
+            }
+          </style>
 
           <style>
             .content-wrapper > nav{
@@ -379,45 +347,7 @@
                   </form>
                 </div>
                 <div id="leftCol" class="col leftCol">
-                  <style>
-                    .leftCol {
-                      position: relative;
-                    }
-                    .leftCol {
-                      flex-basis: 400px;
-                      max-width: 400px;
-                      min-width: 400px;
-                    }
-                    .leftCol.hideme {
-                      flex-basis: 1px;
-                      max-width: 1px;
-                      min-width: 1px;
-                      padding: 0;
-                    }
-                    .columnchanger {
-                      position: absolute;
-                      top: 0;
-                      left: -14px;
-                      background: #353a41;
-                      padding: 4px 3px;
-                      border-radius: 3px;
-                      cursor: pointer;
-                    }
-                  </style>
-                  <a class="columnchanger" onclick="colToggler()"
-                    ><span><i id="chevron" class="fa fa-chevron-right"></i></span
-                  ></a>
-                  <script>
-                    function colToggler() {
-                      var left = $("#colToggled");
-                      var col = $("#leftCol");
-                      var chevron = $("#chevron");
-                      left.hasClass("hidden") ? left.removeClass("hidden") : left.addClass("hidden");
-                      left.hasClass("hidden") ? col.addClass("hideme") : col.removeClass("hideme");
-                      left.hasClass("hidden") ? chevron.addClass("fa-chevron-left").removeClass("fa-chevron-right") : chevron.addClass("fa-chevron-right").removeClass("fa-chevron-left");
-                    }
-                  </script>
-                  <div id="colToggled">
+                 
                     <div class="panel panel-default">
                       <div class="panel-body">
                         <form action="https://dev.esnadm.com/matches" method="GET" name="filter" id="filter">
@@ -479,7 +409,7 @@
                         <div id="pages_actions"><div class="panel-body">–</div></div>
                       </form>
                     </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
